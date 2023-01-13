@@ -1,0 +1,57 @@
+@use 'variables' as c;
+@use 'mixins';
+
+.details{
+    border: 1px solid red;
+    padding: 24px;
+
+    &__company{
+        color: c.$Orange;
+        text-transform: uppercase;
+        font-size: 0.8em;
+        letter-spacing: 1px;
+        margin-bottom: 12px;
+    }
+
+    &__title{
+        font-size: 1.7em;
+        margin-bottom: 16px;
+    }
+
+    &__description{
+        font-size: 0.94em;
+        color: c.$Dark-grayish-blue;
+        line-height: 24px;
+        margin-bottom: 24px;
+    }
+
+    &__prices{
+        border: 1px solid red;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        align-items: center;
+    }
+
+    &__now{
+        font-size: 1.8em;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+
+    &__discount{
+        font-size: 0.5em;
+        background-color: c.$Pale-orange;
+        color: c.$Orange;
+        padding: 4px;
+        border-radius: 4px;
+    }
+
+    &__before{
+        font-weight: 700;
+        color: c.$Dark-grayish-blue;
+        text-decoration: line-through;
+    }
+}
