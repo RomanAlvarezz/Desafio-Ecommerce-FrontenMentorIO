@@ -1,0 +1,30 @@
+@use 'variables' as colores;
+@use 'mixins';
+
+.gallery{
+    &__image-container{
+        border: solid 1px blue;
+        height: 300px;
+        width: 100%;
+        background-image: url('../images/image-product-1.jpg');
+        background-size: cover;
+        background-position-y: -35px;
+    }
+
+    &__prev{
+        @include mixins.image-btn(185px, 15px);
+    }
+
+    &__next{
+        @include mixins.image-btn(185px, 320px);
+    }
+
+    &__thumbnail{
+        display: none;
+
+        @media (min-width: 1115px){
+           display: block;
+        }
+    }
+
+}
