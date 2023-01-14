@@ -192,7 +192,7 @@ body {
 }
 
 .details {
-  border: 1px solid red;
+  border: 1px solid yellow;
   padding: 24px;
 }
 .details__company {
@@ -213,7 +213,6 @@ body {
   margin-bottom: 24px;
 }
 .details__prices {
-  border: 1px solid red;
   display: flex;
   justify-content: space-between;
   margin-bottom: 24px;
@@ -237,6 +236,57 @@ body {
   font-weight: 700;
   color: hsl(219deg, 9%, 45%);
   text-decoration: line-through;
+}
+.details__button {
+  background-color: hsl(26deg, 100%, 55%);
+  height: 57px;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 0.9em;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.details__button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  box-shadow: 0px 4px 15px -7px hsl(26deg, 100%, 55%);
+}
+
+.input {
+  background-color: hsl(223deg, 64%, 98%);
+  height: 57px;
+  display: flex;
+}
+.input__minus {
+  width: 25px;
+  height: 100%;
+  padding: 24px 5px;
+}
+.input__minus:hover {
+  cursor: pointer;
+}
+.input__number {
+  width: 100%;
+  border: none;
+  background-color: hsl(223deg, 64%, 98%);
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.2em;
+  font-weight: 700;
+  text-align: center;
+  outline: none;
+}
+.input__plus {
+  width: 25px;
+  height: 100%;
+  padding: 19px 3px;
+}
+.input__plus:hover {
+  cursor: pointer;
 }
 
 .main-container {

@@ -24,3 +24,32 @@
         cursor: pointer;
     }
 }
+
+@mixin changeNumber($pv, $ph){
+    width: 25px;
+    height: 100%;
+    padding: $pv $ph;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+@mixin button{
+    background-color: colores.$Orange;
+    height: 57px;
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    color: colores.$White;
+    font-size: 0.9em;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    &:hover{
+        cursor: pointer;
+        opacity: 0.6;
+        box-shadow: 0px 4px  15px -7px colores.$Orange;
+    }
+}

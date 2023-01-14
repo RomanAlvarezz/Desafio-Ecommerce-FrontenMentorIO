@@ -1,8 +1,8 @@
 @use 'variables' as c;
-@use 'mixins';
+@use 'mixins' as m;
 
 .details{
-    border: 1px solid red;
+    border: 1px solid yellow;
     padding: 24px;
 
     &__company{
@@ -26,7 +26,6 @@
     }
 
     &__prices{
-        border: 1px solid red;
         display: flex;
         justify-content: space-between;
         margin-bottom: 24px;
@@ -53,5 +52,9 @@
         font-weight: 700;
         color: c.$Dark-grayish-blue;
         text-decoration: line-through;
+    }
+
+    &__button{
+        @include m.button;
     }
 }
