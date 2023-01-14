@@ -6,6 +6,7 @@
     background-color: v.$Light-grayish-blue;
     height: 57px;
     display: flex;
+    margin-bottom: 15px;
 
     &__minus{
         @include mixins.changeNumber(24px, 5px);

@@ -47,6 +47,8 @@
     justify-content: center;
     align-items: center;
     gap: 16px;
+    transition: all 100ms ease-in-out;
+
     &:hover{
         cursor: pointer;
         opacity: 0.6;
