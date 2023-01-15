@@ -149,7 +149,6 @@ body {
 }
 
 .gallery__image-container {
-  border: solid 1px blue;
   height: 300px;
   width: 100%;
   background-image: url("../images/image-product-1.jpg");
@@ -169,6 +168,11 @@ body {
 .gallery__prev:hover {
   cursor: pointer;
 }
+@media (min-width: 1115px) {
+  .gallery__prev {
+    display: none;
+  }
+}
 .gallery__next {
   background-color: hsl(0deg, 0%, 100%);
   width: 40px;
@@ -182,17 +186,42 @@ body {
 .gallery__next:hover {
   cursor: pointer;
 }
-.gallery__thumbnail {
+@media (min-width: 1115px) {
+  .gallery__next {
+    display: none;
+  }
+}
+.gallery__thumbnails {
   display: none;
 }
 @media (min-width: 1115px) {
-  .gallery__thumbnail {
-    display: block;
+  .gallery__thumbnails {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.gallery__thumbnail {
+  width: 90px;
+  border-radius: 1rem;
+  transition: outline 50ms ease-in;
+}
+.gallery__thumbnail:hover {
+  cursor: pointer;
+  outline: 2px solid hsl(26deg, 100%, 55%);
+}
+@media (min-width: 1115px) {
+  .gallery {
+    width: 446px;
+  }
+  .gallery__image-container {
+    border-radius: 16px;
+    height: 446px;
+    margin-bottom: 32px;
+    background-position-y: initial;
   }
 }
 
 .details {
-  border: 1px solid yellow;
   padding: 24px;
 }
 .details__company {
@@ -256,6 +285,28 @@ body {
   cursor: pointer;
   opacity: 0.6;
   box-shadow: 0px 4px 15px -7px hsl(26deg, 100%, 55%);
+}
+@media (min-width: 1115px) {
+  .details {
+    width: 446px;
+    padding-top: 60px;
+  }
+  .details__title {
+    font-size: 2.7em;
+    margin-bottom: 40px;
+  }
+  .details__description {
+    font-size: 1.1em;
+    margin-bottom: 37px;
+  }
+  .details__prices {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .details__product-quantity {
+    display: flex;
+    gap: 32px;
+  }
 }
 
 .input {
@@ -360,6 +411,14 @@ body {
 @media (min-width: 1115px) {
   .main-container {
     width: 1115px;
+  }
+}
+
+@media (min-width: 1115px) {
+  .content {
+    display: flex;
+    padding: 90px 50px;
+    gap: 124px;
   }
 }
 

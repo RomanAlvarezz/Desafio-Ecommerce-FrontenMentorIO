@@ -23,6 +23,9 @@
     &:hover{
         cursor: pointer;
     }
+    @media (min-width:1115px){
+        display: none;
+    }
 }
 
 @mixin changeNumber($pv, $ph){

@@ -3,7 +3,6 @@
 
 .gallery{
     &__image-container{
-        border: solid 1px blue;
         height: 300px;
         width: 100%;
         background-image: url('../images/image-product-1.jpg');
@@ -19,12 +18,34 @@
         @include mixins.image-btn(185px, 320px);
     }
 
-    &__thumbnail{
+    &__thumbnails{
         display: none;
 
         @media (min-width: 1115px){
-           display: block;
+           display: flex;
+           justify-content: space-between;
         }
     }
+
+    &__thumbnail{
+        width: 90px;
+        border-radius: 1rem;
+        transition: outline 50ms ease-in;
+        &:hover{
+            cursor: pointer;
+            outline: 2px solid colores.$Orange;
+        }
+    }
+
+    @media (min-width: 1115px){
+        width: 446px;
+        
+        &__image-container{
+            border-radius: 16px;
+            height: 446px;
+            margin-bottom: 32px;
+            background-position-y: initial;
+        }
+     }
 
 }
