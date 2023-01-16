@@ -1,0 +1,62 @@
+@use 'variables' as colores;
+@use 'mixins' as m;
+
+.modal-gallery{
+    width: 550px;
+
+    &__background{
+        display: none;
+        justify-content: center;
+        align-items: center;
+
+        @include m.modal-background;
+    }
+    
+    &__close-container{
+        text-align: end;
+        height: 30px;
+    }
+
+    &__close{
+        width: 16px;
+        &:hover{
+            cursor: pointer;
+            content: url(../images/icon-close-orange.svg);
+        }
+    }
+
+    &__image-container{
+        background-image: url(../images/image-product-1.jpg);
+        height: 550px;
+        background-size: cover;
+        border-radius: 16px;
+        margin-bottom: 32px;
+        position: relative;
+    }
+
+    &__thumbnails{
+        display: flex;
+        justify-content: space-between;
+        width: 450px;
+        margin: 0 auto;
+
+    }
+
+    &__thumbnail{
+        width: 90px;
+        border-radius: 1rem;
+        transition: outline 50ms ease-in;
+        &:hover{
+            cursor: pointer;
+            outline: 2px solid colores.$Orange;
+        }
+    }
+
+    &__prev{
+        @include m.image-btn(190px, -15px, true)
+    }
+
+    &__next{
+        @include m.image-btn(190px, 520px, true);
+    }
+}

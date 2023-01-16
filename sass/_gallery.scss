@@ -11,11 +11,11 @@
     }
 
     &__prev{
-        @include mixins.image-btn(185px, 15px);
+        @include mixins.image-btn(185px, 15px, false);
     }
 
     &__next{
-        @include mixins.image-btn(185px, 320px);
+        @include mixins.image-btn(185px, 320px, false);
     }
 
     &__thumbnails{
