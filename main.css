@@ -57,7 +57,6 @@ body {
   position: relative;
 }
 .header__cart--notification {
-  display: none;
   width: 15px;
   background-color: hsl(26deg, 100%, 55%);
   width: 15px;
