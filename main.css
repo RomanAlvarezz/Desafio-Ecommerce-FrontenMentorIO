@@ -57,6 +57,7 @@ body {
   position: relative;
 }
 .header__cart--notification {
+  display: none;
   width: 15px;
   background-color: hsl(26deg, 100%, 55%);
   width: 15px;
@@ -117,7 +118,19 @@ body {
   width: 250px;
   height: 100%;
   padding: 28px 24px;
-  display: none;
+}
+.modal-navbar__background {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  transition: 200ms transform ease-in-out, 250ms opacity ease-in;
+  transform: translateX(-100%);
+  opacity: 0.1;
 }
 .modal-navbar__items {
   display: flex;
@@ -135,6 +148,9 @@ body {
 }
 .modal-navbar__close-icon:hover {
   cursor: pointer;
+}
+.modal-navbar__close-icon:hover:hover {
+  content: url(../images/icon-close-orange.svg);
 }
 
 .gallery__image-container {
@@ -342,6 +358,13 @@ body {
   top: 75px;
   right: 6px;
 }
+.cart-modal__empty {
+  font-weight: 700;
+  font-weight: 20px;
+  text-align: center;
+  margin-top: 40px;
+  color: rgba(0, 0, 0, 0.7);
+}
 .cart-modal__title {
   font-weight: 700;
   padding: 24px;
@@ -351,7 +374,6 @@ body {
   padding: 24px;
 }
 .cart-modal__details-container {
-  border: 1px solid red;
   display: flex;
   align-items: center;
   margin-bottom: 24px;
@@ -399,12 +421,13 @@ body {
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.7);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 1;
+  overflow: hidden;
 }
 .modal-gallery__close-container {
   text-align: end;
@@ -412,9 +435,9 @@ body {
 }
 .modal-gallery__close {
   width: 16px;
+  cursor: pointer;
 }
 .modal-gallery__close:hover {
-  cursor: pointer;
   content: url(../images/icon-close-orange.svg);
 }
 .modal-gallery__image-container {
@@ -481,6 +504,7 @@ body {
   width: 375px;
   margin: 0 auto;
   position: relative;
+  overflow-x: hidden;
 }
 @media (min-width: 1115px) {
   .main-container {
@@ -494,6 +518,15 @@ body {
     padding: 90px 50px;
     gap: 124px;
   }
+}
+
+.d-block {
+  display: block;
+}
+
+.move-x {
+  transform: translateX(0);
+  opacity: initial;
 }
 
 /*# sourceMappingURL=main.css.map */

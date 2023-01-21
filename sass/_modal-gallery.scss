@@ -19,8 +19,8 @@
 
     &__close{
         width: 16px;
+        cursor: pointer;
         &:hover{
-            cursor: pointer;
             content: url(../images/icon-close-orange.svg);
         }
     }

@@ -12,6 +12,14 @@
     top: 75px;
     right: 6px;
 
+    &__empty{
+        font-weight: 700;
+        font-weight: 20px;
+        text-align: center;
+        margin-top: 40px;
+        color: v.$Black-modal;
+    }
+
     &__title{
         font-weight: 700;
         padding: 24px;
@@ -23,7 +31,6 @@
     }
 
     &__details-container{
-        border: 1px solid red;
         display: flex;
         align-items: center;
         margin-bottom: 24px;
